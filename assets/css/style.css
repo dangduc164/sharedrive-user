@@ -687,6 +687,7 @@ textarea {
 }
 .p-list-activity-history__steps ul li {
   padding-right: 25px;
+  margin-bottom: 5px;
 }
 .p-list-activity-history__steps ul li a {
   font-weight: 700;
@@ -699,7 +700,7 @@ textarea {
   padding-right: 0;
 }
 .p-list-activity-history__content {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .p-list-activity-history__content ul li {
   margin-bottom: 12px;
@@ -708,6 +709,7 @@ textarea {
   border: 1px solid #E2E2E2;
   border-radius: 4px;
   padding: 12px;
+  position: relative;
 }
 .p-list-activity-history__box__title {
   display: -webkit-box;
@@ -726,6 +728,14 @@ textarea {
   font-size: 16px;
   line-height: 19px;
 }
+.p-list-activity-history__box__status {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .p-list-activity-history__box__status span {
   width: 10px;
   height: 10px;
@@ -733,11 +743,16 @@ textarea {
   border-radius: 50%;
   border: 1px solid #F7FC0E;
   display: inline-block;
+  margin-right: 8px;
 }
 .p-list-activity-history__box__status strong {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+}
+.p-list-activity-history__box__status.red span {
+  background: #E41C1C;
+  border: 1px solid #E41C1C;
 }
 .p-list-activity-history__box__desc {
   font-size: 14px;
@@ -745,10 +760,14 @@ textarea {
   margin-bottom: 12px;
   padding-right: 50px;
 }
+.p-list-activity-history__box__desc span {
+  margin-left: 3px;
+}
 .p-list-activity-history__box__map {
   font-size: 14px;
   line-height: 17px;
   margin-bottom: -2px;
+  width: 60%;
 }
 .p-list-activity-history__box__btn-cancel {
   width: 100%;
@@ -762,6 +781,113 @@ textarea {
 .p-list-activity-history__box__btn-cancel span {
   font-weight: 700;
   line-height: 19px;
+}
+.p-list-activity-history__box__image-error {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+}
+.p-list-activity-history__box__price {
+  position: absolute;
+  right: 30px;
+  line-height: 19px;
+  font-weight: 500;
+  top: 69px;
+}
+.p-list-activity-history__popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.54);
+  z-index: 100;
+}
+.p-list-activity-history__popup__inner {
+  height: 210px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: fixed;
+  top: calc(50% - 66px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 1230px;
+  max-width: calc(100% - 30px);
+}
+.p-list-activity-history__popup__content {
+  padding: 22px 33px 15px;
+}
+.p-list-activity-history__popup__content h5 {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+}
+.p-list-activity-history__popup__content p {
+  margin-top: 18px;
+  margin-bottom: 15px;
+}
+.p-list-activity-history__popup__group-btn {
+  position: fixed;
+  top: calc(50% + 166px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+.p-list-activity-history__popup__group-btn .c-btn-white {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  height: 42px;
+}
+.p-list-activity-history__popup__group-btn .c-btn-white span {
+  line-height: 19px;
+  font-size: 16px;
+}
+.p-list-activity-history__popup__form-group {
+  margin-bottom: 12px;
+}
+.p-list-activity-history__popup__form-group input[type=radio]:checked + label:before,
+.p-list-activity-history__popup__form-group input[type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000000;
+  border-radius: 100%;
+  background: #fff;
+}
+.p-list-activity-history__popup__form-group input[type=radio]:checked + label:after,
+.p-list-activity-history__popup__form-group input[type=radio]:not(:checked) + label:after {
+  background: url(../img/list-activity-history/icon-radio.svg) center no-repeat;
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.p-list-activity-history__popup__form-group input[type=radio]:checked + label,
+.p-list-activity-history__popup__form-group input[type=radio]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline-block;
+  color: #000000;
+  margin-bottom: 0;
 }
 
 .c-btn-black {

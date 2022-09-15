@@ -71,6 +71,9 @@ a {
     text-decoration: none;
     display: inline-block;
     transition: .4s;
+    @include brTablet {
+        cursor: unset;
+    }
 }
 
 img {
