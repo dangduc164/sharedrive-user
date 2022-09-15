@@ -1,0 +1,192 @@
+@charset "utf-8";
+// ============================================================
+// 設定
+// ============================================================
+// HTML5の場合は「true」
+$html5: true;
+// compass ブラウザサポート
+$legacy-support-for-ie6: true;
+$legacy-support-for-ie7: true;
+$experimental-support-for-webkit: true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+//ie9用 svg
+$experimental-support-for-svg: true;
+// 標準font-family
+$fontFamily :'Inter',
+sans-serif;
+$fontMontserrat:'Montserrat',
+sans-serif;
+$fontNoto:'Noto Sans JP',
+sans-serif;
+// 標準行間
+$lineHeight: 16px;
+// カラー
+$cBase:#000000;
+// 標準リンクカラー
+$linkColor: $cBase;
+$linkColor_visit: #cc9999;
+$linkColor_active: #cc9999;
+$linkColor_hover: #cc9999;
+// ============================================================
+// common
+// ============================================================
+@font-face {
+    font-family: "honoka-shin-mincho";
+    src: url("../font/Honoka_Shin_Mincho_L.otf");
+}
+
+@font-face {
+    font-family: "gill-sans-regular";
+    src: url("../font/Gill-Sans.otf");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $fontFamily;
+    background-color: #fff;
+    font-feature-settings: "halt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    color: $cBase;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: $lineHeight;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $cBase;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+select {
+    color: $cBase;
+}
+
+table {
+    width: 100%;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+a:focus,
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+svg,
+path {
+    transition: .4s;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"]:checked+label,
+input[type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    display: inline-block;
+    color: $cBase;
+    margin-bottom: 16px;
+}
+
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #A3A3A3;
+    border-radius: 100%;
+    background: #fff;
+}
+
+input[type="radio"]:checked+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: $cBase;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+input[type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+input[type="text"],
+input[type="date"] {
+    border: 1px solid #ADADAD;
+    max-width: 100%;
+    width: 670px;
+    background-color: #F8F8F8;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-family: $fontFamily;
+    font-weight: 500;
+    border-radius: 5px;
+    color: $cBase;
+    &::placeholder {
+        padding: 0;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+        color: #A3A3A3;
+        font-family: $fontFamily;
+    }
+}
+
+input[type="date"] {
+    width: 200px;
+    height: 50px;
+}
