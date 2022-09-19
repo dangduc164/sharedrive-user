@@ -1,12 +1,8 @@
 @charset "utf-8";
-.is-sp-visible {
-    display: none;
-}
 
-.is-block {
-    display: block;
+.is-show{
+	display: block;
 }
-
-body.is-lock {
-    overflow: hidden;
+.is-hide{
+	display: none;
 }

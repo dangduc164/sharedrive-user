@@ -1,0 +1,291 @@
+.p-register-interview{
+    &__inner{
+        margin-top: 46px;
+        margin-bottom: 30px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 74px;
+    }
+    .c-form{
+        &__form-group{
+            + .c-form__form-group{
+                margin-top: 18px;
+            }
+        }
+        select{
+            color: #999;
+            background: url(../img/driver/common/icn_down_02.svg) no-repeat calc(100% - 19px) center;
+        }
+        textarea{
+            height: 109px;
+        }
+        .custom-select-wrapper {
+            position: relative;
+            display: block;
+            user-select: none;
+            select {
+                display: none;
+            }
+        }
+        /* custom select */
+        .custom-select {
+            position: relative;
+            display: block;
+        }
+        .custom-select-trigger {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 12px 45px 11px 12px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            cursor: pointer;
+            border: 1px solid #BDBDBD;
+            background: url(../img/driver/common/icn_down_02.svg) no-repeat calc(100% - 19px) center;
+            span{
+                margin-left: 14px;
+            }
+        }
+        .custom-select.opened {
+            .custom-select-trigger {
+                &:after {
+                    margin-top: 3px;
+                    transform: rotate(-135deg) translateY(-50%);
+                }
+            }
+            .custom-options {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                transform: translateY(0);
+            }
+        }
+        .custom-options {
+            padding: 12px 0;
+            width: 133px;
+            border: 1px solid #B8BFC4;
+            border-radius: 12px;
+            position: absolute;
+            display: block;
+            top: calc(100% - 6px);
+            right: 0;
+            border: 1px solid #b5b5b5;
+            background: #fff;
+            transition: all .4s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-15px);
+            height: 178px;
+            overflow-y: auto;
+            z-index: 10;
+        }
+        .option-hover {
+            &:before {
+                background: #f9f9f9;
+            }
+        }
+        .custom-option {
+            position: relative;
+            display: block;
+            padding: 0 6px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #2C3E50;
+            line-height: 24px;
+            cursor: pointer;
+            transition: all .4s ease-in-out;
+            + span{
+                margin-top: 8px;
+            }
+        }
+        .custom-option.selection {
+            background: #f9f9f9;
+        }
+
+        /* Date input custom */
+        .date-picker {
+            height: auto;
+            max-height: 44px;
+            border: 1px solid #BDBDBD;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s 0s ease-in-out;
+            .input {
+                width: 100%;
+                height: 44px;
+                font-size: 0;
+                cursor: pointer;
+                .result {
+                    display: inline-flex;
+                    align-items: center;
+                    vertical-align: top;
+                    width: 100%;
+                    height: 44px;
+                    line-height: 19px;
+                    font-size: 16px;
+                    padding: 0 10px;
+                    color: grey;
+                    box-sizing: border-box;
+                    position: relative;
+                    z-index: 10;
+                }
+                button {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    vertical-align: top;
+                    width: 44px;
+                    height: 44px;
+                    color: white;
+                    line-height: 44px;
+                    border: 0;
+                    font-size: 18px;
+                    padding: 0;
+                    background-color: transparent;
+                    z-index: 1;
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+            }
+            .calendar {
+                position: relative;
+                width: 100%;
+                background: #fff;
+                border-radius: 0px;
+                overflow: hidden;
+            }
+            .ui-datepicker-inline {
+                position: relative;
+                width: 100%;
+            }
+            .ui-datepicker-header {
+                height: 100%;
+                line-height: 50px;
+                background: grey;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            .ui-datepicker-prev {
+                width: 20px;
+                height: 20px;
+                text-indent: 9999px;
+                border: 2px solid #fff;
+                border-radius: 100%;
+                cursor: pointer;
+                overflow: hidden;
+                margin-top: 15px;
+                float: left;
+                margin-left: 12px;
+                &:after {
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    margin: -45px 0px 0px 6px;
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 4px;
+                    height: 4px;
+                    border-left: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                }
+            }
+            .ui-datepicker-next {
+                width: 20px;
+                height: 20px;
+                text-indent: 9999px;
+                border: 2px solid #fff;
+                border-radius: 100%;
+                cursor: pointer;
+                overflow: hidden;
+                margin-top: 15px;
+                float: right;
+                margin-right: 12px;
+                &:after {
+                    -webkit-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+                    margin: -45px 0px 0px 4px;
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 4px;
+                    height: 4px;
+                    border-left: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                }
+            }
+            .ui-datepicker-title {
+                text-align: center;
+                color: #fff;
+            }
+            .ui-datepicker-calendar {
+                width: 100%;
+                text-align: center;
+                thead {
+                    tr {
+                        th {
+                            span {
+                                display: block;
+                                width: 100%;
+                                color: #000;
+                                margin-bottom: 5px;
+                                font-size: 13px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .ui-state-default {
+                display: block;
+                text-decoration: none;
+                color: #b5b5b5;
+                line-height: 40px;
+                font-size: 12px;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.02);
+                }
+            }
+            .ui-state-highlight {
+                color: #68768A;
+            }
+            .ui-state-active {
+                color: #000;
+                background-color: rgba(131, 146, 167, 0.12);
+                font-weight: 600;
+            }
+            .ui-datepicker-unselectable {
+                .ui-state-default {
+                    color: #eee;
+                    border: 2px solid transparent;
+                }
+            }
+        }
+        .date-picker.open {
+            max-height: 400px;
+        }
+        
+    }
+    &__btn-continue{
+        margin-top: 110px;
+        a{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            background: #121212;
+            text-align: center;
+            padding: 13px 20px 16px;
+            width: 100%;
+        }
+    }
+}

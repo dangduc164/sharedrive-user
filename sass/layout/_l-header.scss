@@ -1,27 +1,22 @@
- @charset "UTF-8";
- .l-header {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     background-color: #D9D9D9;
-     border-bottom: 1px solid #D9D9D9;
-     z-index: 100;
-     &__wrap {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 12px 0;
-     }
-     &__avatar {
-         display: inline-flex;
-         img {
-             width: 28px;
-             height: 28px;
-         }
-     }
-     +main {
-         margin-top: 83px;
-         padding-bottom: 20px;
-     }
- }
+@charset "UTF-8";
+.l-header {
+    padding: 13px 0 15px;
+    background: #D9D9D9;
+    &__menu{
+        position: relative;
+        top: 3px;
+    }
+    &__noti{
+        margin-right: 18px;
+        position: relative;
+        top: 3px;
+    }
+    &__user{
+        img{
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
