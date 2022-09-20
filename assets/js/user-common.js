@@ -1,54 +1,10 @@
 //show popup 
-function showPopup() {
+function togglePopup() {
     const openPopup = document.getElementById("popup");
     openPopup.style.display === 'none' ? openPopup.style.display = "block" : openPopup.style.display = "none";
 
 }
 
-
-
-// //cusstom input date
-// $("#custom-input-date").datepicker({
-//     dateFormat: 'yy/mm/dd',
-//     language: 'ja',
-// });
-
-// // ACTIONS
-// $("input").on("change", function(e) {
-//     $(this).siblings(".label-error").text("");
-//     $(this).removeClass("error");
-// })
-
-// $("#custom-input-date").on("focusout", function(e) {
-//     if ($(this).val() != '') {
-//         dateValidation($(this));
-//     }
-// })
-
-// // CHECK
-// function dateValidation(input) {
-//     var errorLabel = input.siblings(".label-error");
-//     var date = input.val();
-
-//     input.removeClass("error");
-//     errorLabel.text("");
-
-//     var matches = /^(\d{1,2})[/\/](\d{1,2})[/\/](\d{4})$/.exec(date);
-//     if (matches == null) {
-//         input.addClass("error");
-//         errorLabel.text("Date not valid.");
-//     };
-
-//     var d = matches[1];
-//     var m = matches[2] - 1;
-//     var y = matches[3];
-//     var composedDate = new Date(y, m, d);
-
-//     if (composedDate.getDate() == d && composedDate.getMonth() == m && composedDate.getFullYear() == y) {} else {
-//         input.addClass("error");
-//         errorLabel.text("Date not valid.");
-//     }
-// }
 
 //custom date input
 $(".calendar").datepicker({
@@ -109,3 +65,23 @@ $(function showDrop() {
         }
     });
 });
+
+
+
+//cusstom tabs calendar
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget)
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('active')
+        })
+        tabs.forEach(tab => {
+            tab.classList.remove('active')
+        })
+        tab.classList.add('active')
+        target.classList.add('active')
+    })
+})

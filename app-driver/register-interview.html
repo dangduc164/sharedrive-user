@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link rel="stylesheet" href="./../assets/css/jquery-ui.min.css">
     <link href="./../assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -53,15 +54,7 @@
 
                     <div class="c-form__form-group">
                         <div class="c-form__label">面接希望日</div>
-                        <div class="date-picker">
-                            <div class="input">
-                                <div class="result"><span>2022/05/08</span></div>
-                                <button>
-                                    <img src="./../assets/img/driver/common/icn_calendar.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="calendar"></div>
-                        </div>
+                        <input id="custom-input-date" class="calendar" type="text" name="upload-release" placeholder="2022/05/08">
                     </div>
 
                     <div class="c-form__form-group">

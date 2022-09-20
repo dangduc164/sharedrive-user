@@ -206,6 +206,9 @@
                     line-height: 19px;
                     margin-bottom: 8px;
                 }
+                select {
+                    background-position-x: calc(100% - 18px);
+                }
             }
         }
         &__group-handle {

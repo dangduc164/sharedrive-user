@@ -38,26 +38,47 @@
     </header>
     <!-- End header -->
 
-    <section class="p-training-tutorial">
+    <section class="p-training-video">
         <div class="l-container">
-            <div class="p-training-tutorial__inner">
-                <h3 class="p-training-tutorial__title">研修</h3>
-                <div class="p-training-tutorial__list">
-                    <form>
-                        <div class="form-group">
-                            <input type="checkbox" id="動画1">
-                            <label for="動画1">動画 1</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" id="動画2">
-                            <label for="動画2">動画 2</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" id="動画3">
-                            <label for="動画3">動画 3</label>
-                        </div>
-                    </form>
+            <div class="p-training-video__inner">
+                <div class="p-training-video__top">
+                    <h3 class="p-training-video__title">研修</h3>
+                    <p>動画 1</p>
+                    <a href="#">
+                        <img src="./../assets/img/driver/common/icn_option.svg" alt="">
+                    </a>
                 </div>
+                <div class="custom-video-area" id="custom-popout-video">
+                    <div class="video-controls control">
+                        <div class="row">
+                            <div class="column">
+                                <div class="bottom-wrapper">
+                                    <div class="play-button mini" title="Play/Pause Video">
+                                        <div class="icon-play">
+                                            <img src="./../assets/img/driver/common/icn_play.svg" alt="">
+                                        </div>
+                                        <div class="icon-pause">
+                                            <img src="./../assets/img/driver/common/icn_pause.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <span class="buffer-bar"></span>
+                                        <span class="time-bar"></span>
+                                    </div>
+                                    <div class="time">
+                                        <span class="current">00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <video class="video-element" id="video-element" preload="auto">
+                    <source src="https://player.vimeo.com/external/214459842.hd.mp4?s=ca092a973fe74733eae802a90e1179eff23147fa&profile_id=119&oauth2_token_id=57447761">
+                </div>
+
+                <div class="p-training-video__btn-complete">
+                    <a href="#">完成</a>
+                </div>    
             </div>
 
             <div class="c-btn-message">

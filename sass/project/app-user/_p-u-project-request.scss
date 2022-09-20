@@ -18,9 +18,9 @@
             gap: 38px;
             justify-content: center;
             position: relative;
-            margin-top: 3px;
+            margin-top: 14px;
             &::before {
-                content: url('../../../assets/img/user/project-request/icn_line.svg');
+                content: url('../img/user/project-request/icn_line.svg');
                 position: absolute;
                 top: calc(50% - 24px);
                 left: 50%;
@@ -30,6 +30,7 @@
                 +img {
                     width: 13px;
                     margin: auto;
+                    margin-top: -1px;
                 }
             }
         }

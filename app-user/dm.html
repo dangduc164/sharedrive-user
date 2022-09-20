@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="./../assets/img/driver/common/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -37,42 +38,153 @@
     </header>
     <!-- End header -->
 
-    <!--Main-->
-    <section class="mt-25">
-        <div class="p-u-dm">
-            <div class="l-container">
-                <div class="p-u-dm__header-main">
-                    <div class="p-u-dm__header-main__inner ">
-                        <a href="#">
-                            <img src="./../assets/img/user/common/icn_back.svg" alt="">
-                            <img src="./../assets/img/dm/img_avatar.svg" alt="">
-                            <span>山中洋史</span>
-                        </a>
+    <section class="p-training-chat">
+        <div class="l-container">
+            <div class="p-training-chat__inner">
+                <div class="p-training-chat__top">
+                    <a href="#" class="p-training-chat__btn-return">
+                        <img src="./../assets/img/driver/common/icn_back.svg" alt="">
+                    </a>
+                    <div class="p-training-chat__user-img">
+                        <img src="./../assets/img/driver/common/icn_user.svg" alt="">
+                    </div>
+                    <div class="p-training-chat__user-name">山中洋史</div>
+                </div>
+
+                <div class="screen">
+                    <div class="conversation">
+                        <!-- sent -->
+                        <div class="messages messages--sent">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__icon-seen">
+                                        <img src="./../assets/img/driver/common/icn_seen.svg" alt="">
+                                    </div>
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- received -->
+                        <div class="messages messages--received">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sent -->
+                        <div class="messages messages--sent">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__icon-seen">
+                                        <img src="./../assets/img/driver/common/icn_sended.svg" alt="">
+                                    </div>
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- received -->
+                        <div class="messages messages--received">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sent -->
+                        <div class="messages messages--sent">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__icon-seen">
+                                        <img src="./../assets/img/driver/common/icn_sended.svg" alt="">
+                                    </div>
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- received -->
+                        <div class="messages messages--received">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sent -->
+                        <div class="messages messages--sent">
+                            <div class="message">
+                                こんにちは。
+                                <div class="message__bottom">
+                                    <div class="message__icon-seen">
+                                        <img src="./../assets/img/driver/common/icn_sended.svg" alt="">
+                                    </div>
+                                    <div class="message__time">12:28</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="text-bar">
+                        <form class="text-bar__field" id="form-message">
+                            <div class="text-bar__attachment">
+                                <img src="./../assets/img/driver/common/icn_attachment.svg" alt="">
+                                <input type="file" class="inputfile form-control" name="file">
+                            </div>
+                            <div class="text-bar__input">
+                                <input autofocus type="text" placeholder="送信 ..." />
+                                <div class="text-bar__thumb">
+                                    <div class="thumb"></div>
+                                </div>
+                            </div>
+                            <button class="text-bar__btn-send">
+                                <img src="./../assets/img/driver/common/icn_send.svg" alt="">
+                            </button>
+                        </form>
+
                     </div>
                 </div>
-                <div class="p-u-dm__content">
-                    <ul>
-                        <li class="me">こんにちは。</li>
-                        <li class="client">こんにちは。</li>
-                        <li>こんにちは。</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+
+
             </div>
         </div>
     </section>
-    <!--End Main-->
+
+    <!-- Footer -->
+    <footer class="l-footer">
+
+    </footer>
+    <!-- End footer -->
 
     <!-- Javascript -->
     <script src="./../assets/js/jquery.min.js"></script>
     <script src="./../assets/js/jquery-ui.min.js"></script>
     <script src="./../assets/js/slick.min.js"></script>
-    <script src="./../assets/js/user-common.js"></script>
+    <script src="./../assets/js/common.js"></script>
 </body>
 
 </html>
