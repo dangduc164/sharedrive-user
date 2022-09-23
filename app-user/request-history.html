@@ -94,7 +94,7 @@
                     </div>
                     <div class="p-u-request-history__content__date">
                         <h3>日付</h3>
-                        <input id="custom-input-date" class="calendar" type="text" ata-language='ja' name="upload-release" placeholder="2022/06/20" />
+                        <input id="custom-input-date" class="calendar" type="text" data-language='ja' name="upload-release" placeholder="2022/06/20" />
                     </div>
 
                     <div class="p-u-request-history__content__passengers">
@@ -152,11 +152,50 @@
                         <h3>金額</h3>
                         <p>70,000円</p>
                     </div>
+                    <!--handle show popup-->
                     <div class="p-u-request-history__content__btn">
-                        <a class="c-btn-white" href="#">
+                        <a class="c-btn-white" href="#" onclick="togglePopup()">
                             <span>キャンセル</span>
                         </a>
                     </div>
+                    <!--End handle show popup-->
+
+                    <!--popup-->
+                    <div class="p-u-request-history__popup" id="popup" style="display: none;">
+                        <div class="l-container">
+                            <div class="p-u-request-history__popup__inner">
+                                <div class="p-u-request-history__popup__content">
+                                    <h5>キャンセルするとキャンセル料が発生します。 <br /> よろしいでしょうか。</h5>
+                                    <p class="desc">理由</p>
+                                    <div class="p-u-list-activity-history__popup__form-group">
+                                        <input type="radio" id="ルート変更したいです" name="radio-group" checked>
+                                        <label for="ルート変更したいです">ルート変更したいです</label>
+                                    </div>
+                                    <div class="p-u-list-activity-history__popup__form-group">
+                                        <input type="radio" id="test2" name="radio-group">
+                                        <label for="test2">都合が悪いです</label>
+                                    </div>
+                                    <div class="p-u-list-activity-history__popup__form-group">
+                                        <input type="radio" id="test1" name="radio-group">
+                                        <label for="test1">都合が悪いです</label>
+                                    </div>
+                                    <div class="p-u-list-activity-history__popup__form-group">
+                                        <input type="radio" id="test3" name="radio-group">
+                                        <label for="test3">その他</label>
+                                    </div>
+                                </div>
+                                <div class="p-u-request-history__popup__group-btn">
+                                    <a class="c-btn-white cancel" onclick="togglePopup()" href="#">
+                                        <span>キャンセル</span>
+                                    </a>
+                                    <a class="c-btn-white yes" onclick="" href="#">
+                                        <span>確認</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end popup-->
                 </div>
             </div>
         </div>

@@ -48,11 +48,29 @@
 @import "project/app-driver/p-training-conduct";
 @import "project/app-driver/p-training-tutorial";
 @import "project/app-driver/p-training-video";
+@import "project/app-driver/p-training-video-list";
 @import "project/app-driver/p-training-test";
 @import "project/app-driver/p-training-complete";
 @import "project/app-driver/p-training-confirm";
 @import "project/app-driver/p-training-chat";
-@import "project/app-driver/p-top";
+@import "project/app-driver/p-booking-top";
+@import "project/app-driver/p-booking-history";
+@import "project/app-driver/p-booking-waiting-verify";
+@import "project/app-driver/p-booking-filter";
+@import "project/app-driver/p-calendar-add";
+@import "project/app-driver/p-project-search";
+@import "project/app-driver/p-notification";
+@import "project/app-driver/p-profile";
+@import "project/app-driver/p-profile-myprofile";
+@import "project/app-driver/p-profile-address";
+@import "project/app-driver/p-profile-payments";
+@import "project/app-driver/p-profile-verify";
+@import "project/app-driver/p-profile-details";
+@import "project/app-driver/p-page-faq";
+@import "project/app-driver/p-page-contact";
+@import "project/app-driver/p-page-policy";
+
+
 // User
 @import "project/app-user/p-u-login";
 @import "project/app-user/p-u-register";
@@ -68,6 +86,20 @@
 @import "project/app-user/p-u-driver-info";
 @import "project/app-user/p-u-vote";
 @import "project/app-user/p-u-calendar-booking";
+@import "project/app-user/p-u-payment";
+@import "project/app-user/p-u-list-payment";
+@import "project/app-user/p-u-detail-credit-card";
+@import "project/app-user/p-u-confirm-credit-card";
+@import "project/app-user/p-u-detail-bank";
+@import "project/app-user/p-u-detail-list-payment";
+@import "project/app-user/p-u-drive-search";
+@import "project/app-user/p-u-register-member";
+@import "project/app-user/p-u-register-corporate";
+@import "project/app-user/p-u-faq";
+@import "project/app-user/p-u-profile";
+@import "project/app-user/p-u-profile-edit-info";
+@import "project/app-user/p-u-profile-address";
+@import "project/app-user/p-u-not-info-card";
 //-------------------------------------------
 // Component
 //-------------------------------------------
@@ -75,6 +107,7 @@
 @import "component/c-btn";
 @import "component/c-custom-date";
 @import "component/c-btn-message";
+@import "component/c-popup";
 //-------------------------------------------
 // State
 //-------------------------------------------

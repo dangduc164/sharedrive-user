@@ -1,18 +1,4 @@
 jQuery(function() {
-    //show hide password
-    $(".c-form__toggle-password").click(function() {
-        let inputPassword = $(this).parent().find(".c-form__password");
-        
-        $(this).toggleClass("show")
-        if (inputPassword.attr("type") == "password") {
-            inputPassword.attr("type", "text");
-        } else {
-            inputPassword.attr("type", "password");
-        }
-    });
-
-
-
     //custom video controls
     $(".custom-video-area").each(function() {
         // Video
@@ -237,7 +223,59 @@ jQuery(function() {
             updatebar(e.pageX);
           }
         });
-      });
+    });
+
+    //copy clipboard
+    $(".p-profile-payments__box__action").click(function(){
+        var range = document.createRange();
+        var node = $(this).parent().children().children()[1];
+        range.selectNode(node);
+        window.getSelection().removeAllRanges(); 
+        window.getSelection().addRange(range); 
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+
+        $(".p-profile-payments__copied").fadeIn(1000);
+        setTimeout(() => {
+            $(".p-profile-payments__copied").fadeOut(1000);
+        }, 2000);
+    })
+    $(".p-profile-payments__copied").hide();
+
+
+    // toggle notification delete
+    $(".p-notification__btn-delete").click(function(){
+        $(".p-notification").addClass("p-notification--delete")
+    });
+    $(".p-notification__group-btn button").click(function(){
+        $(".p-notification").removeClass("p-notification--delete")
+    });
+    $(".p-notification__group-btn a").click(function(){
+        $(".p-notification").removeClass("p-notification--delete")
+    });
+
+
+    //show hide password
+    $(".c-form__toggle-password").click(function() {
+        let inputPassword = $(this).parent().find(".c-form__password");
+        
+        $(this).toggleClass("show")
+        if (inputPassword.attr("type") == "password") {
+            inputPassword.attr("type", "text");
+        } else {
+            inputPassword.attr("type", "password");
+        }
+    });
+
+    //check all checkboxs
+    $('#selectall').click(function () {
+        $('.selectedId').prop('checked', this.checked);
+    });
+
+    $('.selectedId').change(function () {
+        var check = ($('.selectedId').filter(":checked").length == $('.selectedId').length);
+        $('#selectall').prop("checked", check);
+    });
 
     //show hide faq
     $(".p-top-search__faq__question").click(function(){
@@ -248,6 +286,11 @@ jQuery(function() {
         $(this).toggleClass("show");
         $(this).find(".p-top-faq__list__answer").slideToggle();
     })
+    $(".p-page-faq__list__question").click(function(){
+        $(this).toggleClass("show");
+        $(this).find(".p-page-faq__list__answer").slideToggle();
+    })
+    
 
     // top driver slider
     $('.p-top-driver__slider').slick({
@@ -455,6 +498,8 @@ jQuery(function() {
     upload("#imageUpload5")
 });
 
+
+//upload
 function upload(elementId){
     $(elementId).change(function(data){
 
@@ -513,16 +558,18 @@ $(document).ready(function(){
         },
         createMessage: function(){
             var base = this;
+            var dt = new Date();
+            var time = dt.getHours() + ":" + dt.getMinutes();
             lastSentMessages.append($('<div/>')
                             .addClass('message')
                             .text(base.currentText)
                             .append(`
-                            <div class="message__bottom">
-                                <div class="message__icon-seen">
-                                    <img src="./../assets/img/driver/common/icn_sended.svg" alt="">
+                                <div class="message__bottom">
+                                    <div class="message__icon-seen">
+                                        <img src="./../assets/img/driver/common/icn_sended.svg" alt="">
+                                    </div>
+                                    <div class="message__time">${time}</div>
                                 </div>
-                                <div class="message__time">12:28</div>
-                            </div>
                             `));
         },
         createGroup: function(){
@@ -617,9 +664,7 @@ $(document).ready(function(){
             lastSentMessages.find('.message').removeClass('anim-wiggle');
             lastSentMessages.find('.message').removeClass('anim-wiggle-2');
         }
-        
     }
-
 
     var newMessage = Object.create(Message);
     newMessage.init();

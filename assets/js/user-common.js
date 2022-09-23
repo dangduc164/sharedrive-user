@@ -2,9 +2,12 @@
 function togglePopup() {
     const openPopup = document.getElementById("popup");
     openPopup.style.display === 'none' ? openPopup.style.display = "block" : openPopup.style.display = "none";
-
 }
-
+//show popup confirm delete
+function handlePopup() {
+    const showPopup = document.getElementById("popupDelete");
+    showPopup.style.display === 'none' ? showPopup.style.display = "block" : showPopup.style.display = "none";
+}
 
 //custom date input
 $(".calendar").datepicker({
@@ -84,4 +87,93 @@ tabs.forEach(tab => {
         tab.classList.add('active')
         target.classList.add('active')
     })
+})
+
+
+//cusstom tabs list-payment
+const tabsPay = document.querySelectorAll('data-tab-target')
+const tabContentsPay = document.querySelectorAll('[data-tab-content]')
+
+tabsPay.forEach(tabPay => {
+    tabPay.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget)
+        tabContentsPay.forEach(tabContent => {
+            tabContent.classList.remove('active')
+        })
+        tabsPay.forEach(tab => {
+            tabPay.classList.remove('active')
+        })
+        tab.classList.add('active')
+        target.classList.add('active')
+    })
+})
+
+
+
+//custom select
+$('.customSelect').each(function() {
+    var $this = $(this),
+        selectOptions = $(this).children('option').length;
+
+    $this.addClass('hide-select');
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="custom-select"></div>');
+
+    var $customSelect = $this.next('div.custom-select');
+    $customSelect.text($this.children('option').eq(0).text());
+
+    var $optionlist = $('<ul />', {
+        'class': 'select-options'
+    }).insertAfter($customSelect);
+
+    for (var i = 0; i < selectOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($optionlist);
+    }
+
+    var $optionlistItems = $optionlist.children('li');
+
+    $customSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.custom-select.active').not(this).each(function() {
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').slideToggle();
+    });
+
+    $optionlistItems.click(function(e) {
+        e.stopPropagation();
+        $customSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $optionlist.hide();
+    });
+
+    $(document).click(function() {
+        $customSelect.removeClass('active');
+        $optionlist.hide();
+    });
+
+});
+
+
+//custom checkbox automatic
+function cbChange(obj) {
+    const cbs = document.getElementsByClassName("cb");
+    cbs = true ? cbs = false : '';
+}
+
+
+// //checkall list-payment
+$("#checkAll").click(function() {
+    $('input:checkbox').not(this).prop('checked', this.checked);
+});
+
+
+
+// show and hiden faq
+$(".p-u-faq__list__question").click(function() {
+    $(this).toggleClass("show");
+    $(this).find(".p-u-faq__list__answer").slideToggle();
 })

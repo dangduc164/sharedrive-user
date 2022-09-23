@@ -40,7 +40,7 @@
             width: auto;
         }
     }
-    &__checkbox{
+    &__checkbox, &__radio{
         input:checked + label:after{
             content: url("../img/driver/common/icn_check.svg");
             display: block;
