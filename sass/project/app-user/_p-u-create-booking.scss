@@ -214,6 +214,9 @@
         &__group-handle {
             text-align: center;
             margin-top: 143px;
+            .c-btn-black{
+                width: 100%;
+            }
         }
         &__case {
             textarea {

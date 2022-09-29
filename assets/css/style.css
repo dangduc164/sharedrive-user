@@ -1748,7 +1748,7 @@ input {
   font-size: 14px;
   line-height: 17px;
   color: #999;
-  background: url(../img/common/icn_down_02.svg) no-repeat calc(100% - 19px) center;
+  background: url(../img/driver/common/icn_down_02.svg) no-repeat calc(100% - 19px) center;
 }
 
 .p-register-interview__inner {
@@ -5782,7 +5782,7 @@ input {
   max-width: calc(100% - 30px);
 }
 .p-u-list-activity-history__popup__content {
-  padding: 22px 33px 15px;
+  padding: 21px 33px 21px;
 }
 .p-u-list-activity-history__popup__content h5 {
   text-align: center;
@@ -6282,7 +6282,14 @@ input {
 .p-u-request-history__content__btn {
   text-align: center;
 }
+.p-u-request-history__content__btn .c-btn-black {
+  width: 100%;
+}
+.p-u-request-history__content__btn .c-btn-black.red {
+  background: #F91515;
+}
 .p-u-request-history__content__btn .c-btn-white {
+  width: 100%;
   border-radius: 0;
 }
 .p-u-request-history__content__btn .c-btn-white span {
@@ -6311,8 +6318,7 @@ input {
   max-width: calc(100% - 30px);
 }
 .p-u-request-history__popup__content {
-  padding: 27px 9px 15px;
-  min-height: 140px;
+  padding: 23px 9px 19px;
 }
 .p-u-request-history__popup__content h5 {
   text-align: center;
@@ -6577,7 +6583,13 @@ input {
 .p-u-request-history-two__content__btn {
   text-align: center;
 }
+.p-u-request-history-two .c-btn-black.red {
+  width: 100%;
+  background: #F91515;
+  margin-bottom: 5px;
+}
 .p-u-request-history-two .c-btn-white {
+  width: 100%;
   margin-top: 15px;
   border-radius: 0;
 }
@@ -6807,6 +6819,9 @@ input {
 .p-u-create-booking__content__group-handle {
   text-align: center;
   margin-top: 143px;
+}
+.p-u-create-booking__content__group-handle .c-btn-black {
+  width: 100%;
 }
 .p-u-create-booking__content__case textarea {
   height: 44px;
@@ -8614,6 +8629,76 @@ input {
   line-height: 17px;
   margin-top: 6px;
 }
+.p-u-register-member__events label,
+.p-u-register-member__events input {
+  cursor: pointer;
+}
+.p-u-register-member__events img {
+  max-width: 100%;
+  display: block;
+  vertical-align: middle;
+}
+.p-u-register-member__events .container {
+  max-width: 99vw;
+  margin: 15px auto;
+  padding: 0 15px;
+}
+.p-u-register-member__events .top-text-wrapper {
+  margin: 20px 0 30px 0;
+}
+.p-u-register-member__events .top-text-wrapper h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.p-u-register-member__events .top-text-wrapper code {
+  font-size: 0.85em;
+  background: -webkit-gradient(linear, left top, right top, from(#fce3ec), to(#ffe8cc));
+  background: linear-gradient(90deg, #fce3ec, #ffe8cc);
+  color: #ff2200;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
+}
+.p-u-register-member__events .tab-section-wrapper {
+  padding: 30px 0;
+}
+.p-u-register-member__events .grid-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  place-items: center;
+  place-content: center;
+}
+.p-u-register-member__events .grid-col-auto {
+  grid-auto-flow: column;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+.p-u-register-member__events label.radio-card {
+  cursor: pointer;
+}
+.p-u-register-member__events label.radio-card .card-content-wrapper {
+  background: #fff;
+  border-radius: 5px;
+  height: 102px;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.04);
+          box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.04);
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+  border: 1px solid #D0D0D0;
+  border-radius: 6px;
+  text-align: center;
+}
+.p-u-register-member__events label.radio-card input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.p-u-register-member__events label.radio-card .card-content img {
+  margin: auto;
+}
 .p-u-register-member__box {
   border: 1px solid #D0D0D0;
   border-radius: 6px;
@@ -9104,6 +9189,80 @@ input {
   white-space: nowrap;
 }
 
+.p-not-found {
+  position: relative;
+}
+.p-not-found__content {
+  height: calc(100vh - 56px);
+  text-align: center;
+  position: relative;
+}
+.p-not-found__content__inner {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+}
+.p-not-found__content__desc {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #A1A1A1;
+  margin-top: 25px;
+}
+.p-not-found__image {
+  position: relative;
+}
+.p-not-found__image span {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 40px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 49px;
+  color: #A1A1A1;
+}
+.p-not-found__btn-back-top {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.p-u-alert-create-booking__inner {
+  text-align: center;
+  height: calc(100vh - 56px);
+  position: relative;
+}
+.p-u-alert-create-booking__content p {
+  margin-top: 24px;
+  width: 274px;
+  max-width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-u-alert-create-booking__wrap {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.p-u-alert-create-booking__group-btn {
+  margin-top: 67px;
+  text-align: center;
+}
+
 .c-form__form-group {
   position: relative;
 }
@@ -9247,6 +9406,20 @@ input {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.c-btn-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-btn-back span {
+  line-height: 19px;
+  font-weight: 700;
+  margin-left: 13px;
 }
 
 /* Date input custom */

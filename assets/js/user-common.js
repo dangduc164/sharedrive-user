@@ -16,14 +16,14 @@ $(".calendar").datepicker({
     firstDay: 1
 });
 
-$(document).on('click', '.date-picker .input', function(e) {
+$(document).on('click', '.date-picker .input', function (e) {
     let $me = $(this),
         $parent = $me.parents('.date-picker');
     $parent.toggleClass('open');
 });
 
 
-$(".calendar").on("change", function() {
+$(".calendar").on("change", function () {
     let $me = $(this),
         $selected = $me.val(),
         $parent = $me.parents('.date-picker');
@@ -32,14 +32,14 @@ $(".calendar").on("change", function() {
 
 
 //custom dropdown
-$(function() {
+$(function () {
     const list = $('.js-dropdown-list');
     const link = $('.js-link');
-    link.click(function(e) {
+    link.click(function (e) {
         e.preventDefault();
         list.slideToggle(200);
     });
-    list.find('li').click(function() {
+    list.find('li').click(function () {
         let text = $(this).find("label").html();
         // let icon = '<i class="fa fa-chevron-down"></i>';
         link.html(text);
@@ -52,13 +52,24 @@ $(function() {
 });
 
 $(function showDrop() {
+    let count = 0;
     const item = $('.js-dropdown-lists');
     const links = $('#js-links');
-    links.click(function(e) {
+    const buttonSubmit = $('#button-submit');
+    const handleClass = 'p-u-create-booking__content__group-handle';
+    const handleClassClicked = 'p-u-create-booking__content__group-handle-clicked';
+    links.click(function (e) {
         e.preventDefault();
         item.slideToggle(200);
+        if (count % 2 == 0) {
+            buttonSubmit.removeClass(handleClass).addClass(handleClassClicked);
+        }
+        else {
+            buttonSubmit.removeClass(handleClassClicked).addClass(handleClass);
+        }
+        count++;
     });
-    item.find('li').click(function() {
+    item.find('li').click(function () {
         let text = $(this).find(".text-label").html();
         // let icon = '<i class="fa fa-chevron-down"></i>';
         links.html(text);
@@ -111,7 +122,7 @@ tabsPay.forEach(tabPay => {
 
 
 //custom select
-$('.customSelect').each(function() {
+$('.customSelect').each(function () {
     var $this = $(this),
         selectOptions = $(this).children('option').length;
 
@@ -135,22 +146,22 @@ $('.customSelect').each(function() {
 
     var $optionlistItems = $optionlist.children('li');
 
-    $customSelect.click(function(e) {
+    $customSelect.click(function (e) {
         e.stopPropagation();
-        $('div.custom-select.active').not(this).each(function() {
+        $('div.custom-select.active').not(this).each(function () {
             $(this).removeClass('active').next('ul.select-options').hide();
         });
         $(this).toggleClass('active').next('ul.select-options').slideToggle();
     });
 
-    $optionlistItems.click(function(e) {
+    $optionlistItems.click(function (e) {
         e.stopPropagation();
         $customSelect.text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
         $optionlist.hide();
     });
 
-    $(document).click(function() {
+    $(document).click(function () {
         $customSelect.removeClass('active');
         $optionlist.hide();
     });
@@ -166,14 +177,14 @@ function cbChange(obj) {
 
 
 // //checkall list-payment
-$("#checkAll").click(function() {
+$("#checkAll").click(function () {
     $('input:checkbox').not(this).prop('checked', this.checked);
 });
 
 
 
 // show and hiden faq
-$(".p-u-faq__list__question").click(function() {
+$(".p-u-faq__list__question").click(function () {
     $(this).toggleClass("show");
     $(this).find(".p-u-faq__list__answer").slideToggle();
 })

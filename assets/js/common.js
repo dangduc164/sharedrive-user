@@ -671,5 +671,6 @@ $(document).ready(function(){
 
     var newThumb = Object.create(Thumb);
     newThumb.init();
+    
 })
 
