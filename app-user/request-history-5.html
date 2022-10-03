@@ -149,13 +149,34 @@
                         <a href="#" class="c-btn-black red">
                             <span>確定待ち</span>
                         </a>
-                        <a class="c-btn-white" href="#">
+                        <a class="c-btn-white" href="#" onclick="togglePopup()">
                             <span>キャンセル</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--popup-->
+        <div class="p-u-list-activity-history__popup" id="popup" style="display: none;">
+            <div class="l-container">
+                <div class="p-u-list-activity-history__popup__inner">
+                    <div class="p-u-list-activity-history__popup__content">
+                        <h5>キャンセルしてもよろしいでしょうか。</h5>
+                    </div>
+                    <div class="p-u-list-activity-history__popup__group-btn">
+                        <a class="c-btn-white cancel" onclick="togglePopup()" href="#">
+                            <span>キャンセル</span>
+                        </a>
+                        <a class="c-btn-white yes" onclick="" href="#">
+                            <span>確認</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end popup-->
+
     </section>
     <!--end main-->
     <!-- Javascript -->

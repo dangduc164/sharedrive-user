@@ -5664,14 +5664,18 @@ input {
 .p-u-list-activity-history__content {
   margin-top: 20px;
 }
-.p-u-list-activity-history__content ul li {
-  margin-bottom: 12px;
-}
 .p-u-list-activity-history__box {
   border: 1px solid #E2E2E2;
   border-radius: 4px;
   padding: 12px;
   position: relative;
+  margin-bottom: 12px;
+}
+.p-u-list-activity-history__box:last-of-type {
+  margin-bottom: 0;
+}
+.p-u-list-activity-history__box__width {
+  width: 100%;
 }
 .p-u-list-activity-history__box__title {
   display: -webkit-box;
@@ -6821,6 +6825,9 @@ input {
   margin-top: 143px;
 }
 .p-u-create-booking__content__group-handle .c-btn-black {
+  width: 100%;
+}
+.p-u-create-booking__content__group-handle-clicked .c-btn-black {
   width: 100%;
 }
 .p-u-create-booking__content__case textarea {

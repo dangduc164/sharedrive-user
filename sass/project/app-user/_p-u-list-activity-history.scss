@@ -34,17 +34,24 @@
     }
     &__content {
         margin-top: 20px;
-        ul {
-            li {
-                margin-bottom: 12px;
-            }
-        }
+        // ul {
+        //     li {
+                
+        //     }
+        // }
     }
     &__box {
         border: 1px solid #E2E2E2;
         border-radius: 4px;
         padding: 12px;
         position: relative;
+        margin-bottom: 12px;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &__width{
+            width: 100%;
+        }
         &__title {
             display: flex;
             align-items: center;
